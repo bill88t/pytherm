@@ -10,7 +10,7 @@ class thermal:
         self._device.cut()
 
     def line(self, count=1):
-        self._device.text(b'\n' * count)
+        self._device.text("\n" * count)
 
     def write(self, data="", end="\n"):
         if self._device is not None:
