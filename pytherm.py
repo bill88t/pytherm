@@ -38,8 +38,8 @@ class thermal:
     def regular(self):
         self._device.text("\x1b\x21\x00")
 
-    def qr(self, content):
-        self._device.qr(content)
+    def qr(self, content, ec=2, size=10):
+        self._device.qr(content, ec, size)
 
     def image(self, path):
         self._device.image(path)
