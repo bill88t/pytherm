@@ -5,8 +5,9 @@ class thermal:
         self._device = _Fl(device)
         self.left()
         self.regular()
+        self._device._raw(bytes([27, 51, 1]))
 
-    def cut(self, lines=3):
+    def cut(self, lines=4):
         self._device._raw(b"\n" * lines + b"\x1dV\x00")
         self._device.flush()
 
